@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ header{
+    width: 1190px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin: 0 auto;
+}
+#tm-logo{
+    width: 190px;
+} 
+#bg{
+    width: 100%;
+    background-color: #F62E30;
+}
+#content{
+    width: 1190px;
+    height: 600px; 
+    margin: 0 auto;
+    background-image: url(../images/TB1JuvxrSR26e4jSZFEXXbwuXXa-1190-600.jpg);
+    position: relative;
+} 
+#container{
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.top{
+    margin-top: 4px;
+    margin-bottom:20px;
+}
+#dialog{
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #80838a;
+    background: url(../images/dialog.png) no-repeat;
+    /* background-position: 15px 0; */
+    background-color: #FEF2F2;
+    border:1px solid #FFB4A8;
+    display: none; 
+}
+#uname{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 45px;
+    color: #80838a;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background:url(../images/uname.png) no-repeat;
+}
+#upwd{
+    width: 300px;
+    height: 40px; 
+    margin-bottom: 20px;
+    padding-left: 45px;
+    color: #80838a;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background:url(../images/password.png) no-repeat;
+}
+input:focus{
+    border: 1px solid red!important;
+    outline: none;
+}
+#fm-button{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    background-color: #ff0036;
+    border-color: #ff0036;
+    font-size: 16px;
+    color: white;
+    font-family: Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5B8B\4F53,sans-serif;
+}
+.font-16{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5B8B\4F53,sans-serif;
+}
+.p-right{
+    text-align: right;
+    font-size: 12px;
+}
+.font-12{
+    color: #6c6c6c;
+    font-family: Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5B8B\4F53,sans-serif;
+}
+.font-16:link{
+    color: black;
+    text-decoration: none;
+}
+.font-16:visited { 
+    color:black;
+    text-decoration: none; 
+} 
+.font-16:hover { 
+    color:black;
+    text-decoration: none; 
+} 
+.font-16:active { 
+    color:black;
+    text-decoration: none;
+ }
+.font-12:link{
+    color: #6c6c6c;
+    text-decoration: none;
+}
+.font-12:visited { 
+    color:#6c6c6c;
+    text-decoration: none; 
+} 
+.font-12:hover { 
+    color:#6c6c6c;
+    text-decoration: none; 
+} 
+.font-12:active { 
+    color:#6c6c6c;
+    text-decoration: none;
+ }
