@@ -1,6 +1,6 @@
 //引入express模块
 const express = require('express');
-//引入路由n
+//引入路由
 const loginRouter = require('./routers/login.js');
 //引入body-parser中间件
 const bodyParser = require('body-parser');
@@ -18,4 +18,4 @@ server.use(bodyParser.urlencoded({
 }));
 //使用路由器
 //使用（挂载）的url:/login
-server.use('/login_get',loginRouter);
+server.use('/login',loginRouter);

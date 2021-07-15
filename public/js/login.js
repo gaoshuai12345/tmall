@@ -12,22 +12,29 @@ function btnsubmit(){
     //1.dom接收数据
     var u_name = uname.value;
     var u_pwd = upwd.value;
+    console.log(u_name)
+    console.log(u_pwd)
     //2.ajax异步连接服务器
     //2.1创建异步对象
     var xhr = new XMLHttpRequest();
     //2.4创建监听，获取响应数据
+    console.log(11111)
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
             var result = xhr.responseText;
             alert(result);
         }
     }
+    console.log(222222)
     //2.2打开链接，创建请求
-    var url = "http://127.0.0.1:8080/login_get?uname="+u_name+"&upwd="+u_pwd;
-    // xhr.open("get",url,true);
-    xhr.open("post",url,true);
+    var url = "http://127.0.0.1:8080/login/login_get?uname="+u_name+"&upwd="+u_pwd;
+    console.log(333333)
+     xhr.open("get",url,true);
+    // xhr.open("post",url,true);
     //post 需要加消息头
-     //xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    //  xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     //2.3发送请求
+    console.log(444444)
     xhr.send();
+    console.log(55555555)
 }

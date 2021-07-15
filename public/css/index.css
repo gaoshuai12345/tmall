@@ -41,7 +41,7 @@ nav{
     height: 32px;
     padding: 0 5px;
 }
-.dropdown{
+.position-relative{
     position: relative;
 }
 .dropdown-content{
@@ -54,13 +54,14 @@ nav{
     color: #999999;
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
     
 }
-.dropdown:hover a{
-    color: red;
+.position-relative:hover a{
+    color: #FF0036;
     background-color: white; 
 } 
-.dropdown:hover .dropdown-content{
+.position-relative:hover .dropdown-content{
     display: block;
 }
 .w1024-h130{
@@ -70,20 +71,23 @@ nav{
     position: relative;
 }
 .search-input{
-    width: 625px;
+    width: 410px;
     height: 36px;
     font-size: 14px;
     color: #80838a;
     padding-left: 15px;
     border-color: #FF0036;
     box-sizing: border-box;
+    position: absolute;
+    top: 50px;
+    left: 320px;
 }
 .search-btn{
     width: 132px;
     height: 36px;
     position: absolute;
-    right: 90px;
-    top: 107px;
+    right: 295px;
+    top: 50px;
     font-size: 16px;
     font-weight: bold;
     color: white;
@@ -97,4 +101,66 @@ nav{
 .search-input:focus{
     border-color: #FF0036;
     outline: none;
+}
+.nav-h36{
+    height: 36px;
+}
+.nav-w1024{
+    width: 1024px;
+    margin: 0 auto;
+}
+.margin-left-45{
+    margin-left: 45px;
+}
+.a-no{
+    text-decoration: none;
+}
+.nav-a-font{
+    font-size: 16px;
+    color: #333;
+}
+.nav-a-font:hover{
+    color: #FF0036;
+}
+.inline-block{
+    display: inline-block
+}
+.w200-h36{
+    box-sizing: border-box;
+    margin-top: 1px;
+    padding-left: 20px;
+    width: 200px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight:bold;
+    color: #f0f0f0;
+    background-color: #FF0036;
+}
+.w100{
+    width: 100px;
+    margin-top: 6px;
+}
+.w760{
+    width: 760px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ul-li-none{
+    list-style: none;
+}
+.ul-background{
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-left: 45px;
+}
+.w200{
+    width: 200px;
+    height: 500px;
+    position: absolute;
+    left: 0px;
 }

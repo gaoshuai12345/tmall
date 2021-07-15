@@ -5,8 +5,8 @@ const pool = require('../pool.js');
 //创建连接池对象
 var router = express.Router();
 //创建路由
-// router.get('/',(req,res)=>{
-    router.post('/',(req,res)=>{
+router.get('/login_get',(req,res)=>{
+    // router.post('/',(req,res)=>{
     var $uname = req.query.uname;
     var $upwd = req.query.upwd;
     if(!$uname){
@@ -17,12 +17,9 @@ var router = express.Router();
         res.send('没有获取到用户密码');
         return;
     }
-    //使用连接池访问数据库
-    console.log(111,$uname)
-    console.log(111,$upwd)
+    //使用连接池访问数据库/*  */
     var sql = "SELECT  * FROM tmall_user WHERE uname=? AND upwd=?"
     pool.query(sql,[$uname,$upwd],(err,result)=>{
-        console.log(333,result);
         if(result.length>0){
             res.send('登陆成功');
         }else{
