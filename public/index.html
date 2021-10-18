@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
     <link rel="stylesheet" href="css/index.css" >
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
 </head>
 <body>
     <div id="container"> 
         <header>
             <nav>
-                <p>
+                <p id="nav_head">
                     <em>喵，欢迎来天猫</em>
                     <a href="login.html">请登录</a>
                     <a href="#">免费注册</a>
                 </p>
                 <ul class="nav-ul">
                     <li class="li-float-left position-relative" >
-                        <a class="a-none" href="#">我的淘宝</a>
+                        <a class="a-none" id="nav-a" href="#">我的淘宝</a>
                         <ul class="dropdown-content">
                             <li><a class="a-none" href="#">已买到的宝贝</a></li>
                             <li><a class="a-none" href="#">已卖出的宝贝</a></li>
@@ -36,7 +38,7 @@
         <div>
             <!-- 搜索框 -->
             <div class="w1024-h130">
-                <img src="../images/logo.gif" alt="login">
+                <img src="images/logo.gif" alt="login">
                 <input class="search-input" type="text" placeholder="搜索 天猫 商品/品牌/店铺">
                 <button class="search-btn">搜索</button>
             </div>
@@ -45,28 +47,38 @@
                 <div class="nav-w1024">
                     <div class=" margin-left-45 li-float-left inline-block w200-h36 bg-red position-relative">
                         商品分类
-                        <ul class="ul-li-none ul-background position-relative w200">
-                            <li>女装/内衣</li>
-                            <li>男装/运动户外</li>
-                            <li>女鞋/男鞋/箱包</li>
-                            <li>美妆/个人护理</li>
-                            <li>腕表/眼镜/珠宝饰品</li>
-                            <li>手机/数码/电脑办公</li>
-                            <li>母婴玩具</li>
-                            <li>零食/茶酒/进口食品</li>
-                            <li>生鲜水果</li>
-                            <li>大家电/生活电器</li>
-                            <li>家具建材</li>
-                            <li>汽车/配件/用品</li>
-                            <li>家纺/家饰/鲜花</li>
-                            <li>医疗保健</li>
-                            <li>厨具/收纳/</li>
-                            <li>图书音像</li>
+                        <ul class="ul-li-none ul-background position-relative ul-flex w200">
+                            <li id="li-one-block"class="li-line">
+                                <a  class="aside-a-font a-no" href="#"> 女装/内衣</a>
+                                <ul class="ul-content">
+                                    <li class="ul-li-none">女装新品</li>
+                                </ul>
+                            </li>
+                            <li id="li-two-block"class="li-line">
+                                <a class="aside-a-font a-no" href="#"> 男装/运动户外</a>
+                                <ul class="ul-content-two">
+                                    <li class="ul-li-none">男装新品</li>
+                                </ul>
+                            </li>
+                            <li class="li-line">女鞋/男鞋/箱包</li>
+                            <li class="li-line">美妆/个人护理</li>
+                            <li class="li-line">腕表/眼镜/珠宝饰品</li>
+                            <li class="li-line">手机/数码/电脑办公</li>
+                            <li class="li-line">母婴玩具</li>
+                            <li class="li-line">零食/茶酒/进口食品</li>
+                            <li class="li-line">生鲜水果</li>
+                            <li class="li-line">大家电/生活电器</li>
+                            <li class="li-line">家具建材</li>
+                            <li class="li-line">汽车/配件/用品</li>
+                            <li class="li-line">家纺/家饰/鲜花</li>
+                            <li class="li-line">医疗保健</li>
+                            <li class="li-line">厨具/收纳/</li>
+                            <li class="li-line">图书音像</li>
                         </ul>
                     </div>
                     <div class="w760">
-                    <a href="#"><img class="w100"src="../images/tianmaochaoshi.png" alt=""></a>
-                    <a href="#"><img class="w100"src="../images/tianmaoguoji.png" alt=""></a>
+                    <a href="#"><img class="w100"src="images/tianmaochaoshi.png" alt=""></a>
+                    <a href="#"><img class="w100"src="images/tianmaoguoji.png" alt=""></a>
                     <a class ="a-no nav-a-font" href="#">天猫会员</a>
                     <a class ="a-no nav-a-font" href="#">喵鲜生</a>
                     <a class ="a-no nav-a-font" href="#">医药馆</a>
@@ -77,13 +89,51 @@
                     </div>
                 </div>
             </div>
-            <!-- 轮播 -->
-            <div>
-                
+         <!-- 轮播 -->
+        <div class="margin-auto">
+            <div id="banner">
+                <ul id="ul-imgs" style="width: 8260px; margin-left:0px;">
+                    <li><a href="javascript:;"><img src="images/banner1.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/banner2.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/banner3.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/banner4.webp"></a></li>
+                    <li><a href="javascript:;"><img src="images/banner5.webp"></a></li>
+                    <li><a href="javascript:;"><img src="images/banner6.webp"></a></li>
+                    <!--注意！最后li个数要比实际图片张数多1，最后一个li里的img是重复第一张li的图片-->
+                    <li><a href="javascript:;"><img src="images/banner1.jpg"></a></li>
+                </ul>
+                <ul id="ul-idxs">
+                    <!--虽然li个数比实际图片张数多1，但小圆点的个数不必多1-->
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
         </div>
-        <footer></footer>
+        <div>
+            <!-- 1f -->
+            <div class="padd-213">
+             <div id="f-1"  class="muen-1f position-relative">
+                <div class="w123">
+                    <div class="position-relative">
+                        <div class="div-position">
+                         <span>schneider</span>
+                         <a href="#" class="a-block">点击进入</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+           </div>
+        </div>
+        </div>
+        <footer class="footerpage">
+            
+        </footer>
     </div>
+    <script src="js/index.js"></script>
 </body>
 </html>
 

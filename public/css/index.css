@@ -57,7 +57,7 @@ nav{
     z-index: 1000;
     
 }
-.position-relative:hover a{
+.position-relative:hover #nav-a{
     color: #FF0036;
     background-color: white; 
 } 
@@ -71,7 +71,7 @@ nav{
     position: relative;
 }
 .search-input{
-    width: 410px;
+    width: 600px;
     height: 36px;
     font-size: 14px;
     color: #80838a;
@@ -86,7 +86,7 @@ nav{
     width: 132px;
     height: 36px;
     position: absolute;
-    right: 295px;
+    right: 105px;
     top: 50px;
     font-size: 16px;
     font-weight: bold;
@@ -152,15 +152,149 @@ nav{
     list-style: none;
 }
 .ul-background{
-    background-color: rgba(0,0,0,0.5);
-    color:white;
-    font-size: 14px;
+    background-color: rgba(0,0,0,0.3);
+    /* background-color: #000; */
+    /* opacity:0.5; */
     box-sizing: border-box;
     padding-left: 45px;
+    z-index: 100;
+}
+.aside-a-font{
+    color:#fff;
+    font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+    font-size: 14px;
+}
+.ul-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 .w200{
     width: 200px;
     height: 500px;
     position: absolute;
     left: 0px;
+}
+.li-line{
+    height: 31.2px;
+    line-height: 31.2px;
+}
+#banner{
+    width: 1130px;
+    margin-left: 44px;
+    overflow:hidden;
+    position:relative;
+    z-index: 99;
+}
+#ul-imgs{
+    width: 7910px; margin-left: 0px;
+    list-style:none;
+}
+#ul-imgs.transition{
+    transition:all .5s linear;
+}
+#ul-imgs>li{
+    width: 1130px;
+    float:left;
+}
+#ul-imgs img{
+    width: 1130px;
+}
+#ul-idxs{
+    width: 120px;
+    margin: 0 auto;
+    list-style:none;
+    position:absolute;
+    bottom: 35px;
+    left:50%;
+    margin-left:-50px;
+}
+#ul-idxs>li{
+    float:left;
+    width:10px; height:10px;
+    background-color:#fff;
+    border-radius:5px;
+    margin:0 5px;
+    cursor:pointer;
+}
+#ul-idxs>li.active{
+    background-color:#E5002B;
+}
+.margin-auto{
+    margin:0 auto;
+    width: 1024px;
+}
+.ul-content{
+    display: none;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    left: 155px;
+    top: 0px;
+    color: #000;
+    background-color: #fff;
+}
+#li-one-block:hover .ul-content{
+    display: block;
+}
+.ul-content-two{
+    display: none;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    left: 155px;
+    top: 0px;
+    color: #000;
+    background-color: #fff;
+}
+#li-two-block:hover .ul-content-two{
+    display: block;
+}
+.padd-213{
+    margin: 0 auto;
+    padding-left: 213px;
+    width: 1150px;
+}
+.muen-1f{
+    width: 1130px;
+    height: 300px;
+    background-image: url(../images/muen.png);
+    background-repeat: no-repeat;
+}
+.w123{
+    width: 112px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.8);
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+.a-block{
+    display: block;
+    text-decoration:none;
+    font-size: 10px;
+    color: white;
+    width: 55px;
+    height: 16px;
+    padding-left: 5px;
+    background-color: red;
+    border: 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.div-position>span{
+    color: white;
+}
+.div-position{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}
+#f-1:hover .w123{
+    display: block;
 }

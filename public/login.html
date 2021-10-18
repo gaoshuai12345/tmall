@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>理想生活上天猫</title>
     <link rel="stylesheet" href="css/login.css">
-<script src="js/login.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
         <header>
             <a href="https://www.tmall.com/"title="天猫Tmall">
-                <img id="tm-logo" src="../images/Tmallfont.png" alt="天猫Tmall">
+                <img id="tm-logo" src="images/Tmallfont.png" alt="天猫Tmall">
             </a>
         </header>
         <div id="bg">
@@ -20,9 +20,11 @@
                         <a href="#" class="font-16">密码登录</a>
                         <a href="#" class="font-16">短信登录</a> 
                     </p>   
-                    <div id="dialog"></div>        
-                    <input type="text" placeholder="请输入用户名" id="uname">
-                    <input type="password" placeholder="请输入密码" id="upwd">
+                    <div id="dialog"></div>      
+                    <input type="text"  placeholder="请输入用户名" id="uname">
+                    <from>  
+                    <input type="password"  placeholder="请输入密码" id="upwd">
+                    </from>
                     <input type="button" value="登录" id="fm-button" onclick="btnsubmit()">
                     <p class="p-right">
                         <a class="font-12" href="#">忘记密码</a>
@@ -32,5 +34,7 @@
                 </div>
             </div>
         </div>
+<!-- <script src="js/ajax.js"></script> -->
+
 </body>
 </html>
