@@ -1,6 +1,9 @@
-// const { head } = require("../../routers/login");
 
-(function (){//因为无论进入按钮，还是进入ul，都要保证ul显示
+
+ (function (){
+  
+  
+  //因为无论进入按钮，还是进入ul，都要保证ul显示
 //因为无论从按钮出，还是从ul出，都要关闭ul
 //又因为按钮和ul都是包含在一个div内的
 //所以，应该把鼠标进入和移出事件绑定在共同的父元素div上
@@ -94,22 +97,41 @@ ulIdxs.onclick=function(e){
     }
   }
 }
-var Suid = sessionStorage.getItem("Suid");
-var Suname = sessionStorage.getItem("Suname")
-var nav_head=document.querySelector("#nav_head")
-if(Suid!=null){
-  nav_head.innerHTML=`<em>喵，欢迎来天猫</em>
-  <a href="javascript:;">${Suname}</a>
-  <a href="#">退出</a>`
+var $uname=localStorage.getItem("uname")
+//console.log($uname)
+// document.getElementById("uname").innerHTML="欢迎"+$uname;
+if($uname !=""&&$uname!=null){
+  document.getElementById("uname").innerHTML="欢迎"+$uname;
+  document.getElementById('dl').style.display="none";
+  document.getElementById('zc').style.display="none";
+  document.getElementById('quit').style.display="inline";
 }else{
-  nav_head.innerHTML=`<em>喵，欢迎来天猫</em>
-  <a href="login.html">请登录</a>
-  <a href="#">免费注册</a>`
+  document.getElementById("uname").innerHTML="喵，欢迎来天猫"
 }
+
+
+// var Suid = sessionStorage.getItem("Suid");
+// var Suname = sessionStorage.getItem("Suname")
+// var nav_head=document.querySelector("#nav_head")
+// if(Suid!=null){
+//   nav_head.innerHTML=`<em>喵，欢迎来天猫</em>
+//   <a href="javascript:;">${Suname}</a>
+//   <a href="#">退出</a>`
+// }else{
+//   nav_head.innerHTML=`<em>喵，欢迎来天猫</em>
+//   <a href="login.html">请登录</a>
+//   <a href="#">免费注册</a>`
+// }
 $(function(){
     /*公共部分
      * footer CopyRight
      */
     $(".footerpage").load("footer.html");
 })
-})();
+} )();
+function quit(){
+  localStorage.removeItem("uname");
+  document.getElementById("uname").innerHTML="喵，欢迎来天猫"
+  document.getElementById('dl').style.display="inline";
+  document.getElementById('zc').style.display="inline";
+}

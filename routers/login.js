@@ -27,20 +27,30 @@ var router = express.Router();
         return;
     }
     //使用连接池访问数据库/*  */
-    var sql = "SELECT  * FROM tmall_user WHERE uname=? AND upwd=?"
+    var sql = "SELECT  *FROM tmall_user WHERE uname=? AND upwd=?"
     pool.query(sql,[$uname,$upwd],(err,result)=>{
         // if(result.length>0){
         //      res.send(1);
         // }else{
         //     res.send(0);
         // }
-        if(err) {
-            throw err
-        }
-        else{
-            res.send("1")
-        }
-        
+        // if(err) {
+        //     throw err
+        // }
+        // else{
+        //     if(result.length>0){
+        //         res.send(1)
+        //     }else{
+        //         res.send(0)
+        //     }
+            
+        // }
+        if(err) throw err;
+	    if(result.length>0){
+	        res.send('1');
+	    }else{
+	        res.send('0');
+	    }
     })
 });
 //导出路由对象

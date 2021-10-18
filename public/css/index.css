@@ -41,6 +41,9 @@ nav{
     height: 32px;
     padding: 0 5px;
 }
+#quit{
+    display: block;
+}
 .position-relative{
     position: relative;
 }

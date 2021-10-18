@@ -51,25 +51,27 @@ function btnsubmit(){
     //4.绑定监听
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200){
-            var result = xhr.responseText;
+           var result = xhr.responseText;
             if(result==1){
                 // setTimeout(function(){
                    // alert("登陆成功")
+                    localStorage.setItem("uname",$uname);
+                    console.log($uname)
                     location.href="http://127.0.0.1:8080/index.html"
                 //},3000);
 
-                // alert("登陆成功");
-                // location.href="http://127.0.0.1:8080/index.html"
-            }else{
+            //     // alert("登陆成功");
+            //     // location.href="http://127.0.0.1:8080/index.html"
+             }else{
                 alert("登陆失败");
-            }
+             }
         }
     }
     //2.打开链接
     var url = "http://127.0.0.1:8080/login/login_post"
     xhr.open("post",url,true);
     var formdata = "uname="+$uname+"&upwd="+$upwd;
-    console.log(formdata);
+    // console.log(formdata);
     //由于要传递整个请求主体
     //请求主体中有特殊字符，必须修改请求头
     xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
